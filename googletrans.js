@@ -42,7 +42,10 @@ function output(value){
     tasks.shift()(undefined);
 }
 
-function finish(value){}
+function finish(value){
+    var log = $("#log")[0];
+    log.value += "\n\n" + $("#outbox")[0].value;
+}
 
 google.setOnLoadCallback(function(){
   $("#button").click(function(){
